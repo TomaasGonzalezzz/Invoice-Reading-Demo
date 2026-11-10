@@ -1,0 +1,35 @@
+[project]
+name = "facturas"
+version = "0.1.0"
+description = "Extract Argentine invoices (PDF, scans, photos) into validated JSON/Excel, using the AFIP QR as ground truth anchor."
+requires-python = ">=3.12"
+dependencies = [
+    "anthropic>=2.6.0",
+    "fastapi>=0.162.4",
+    "matplotlib>=3.11.2",
+    "numpy>=2.5.4",
+    "opencv-python-headless>=5.0.0.93",
+    "openpyxl>=3.1.5",
+    "pdfplumber>=0.11.10",
+    "pillow>=13.0.0",
+    "pydantic>=2.14.3",
+    "pypdfium2>=5.15.1",
+    "python-multipart>=0.0.33",
+    "qrcode[pil]>=8.2",
+    "rapidocr-onnxruntime>=1.4.4",
+    "reportlab>=5.1.0",
+    "uvicorn>=0.54.0",
+    "zxing-cpp>=3.1.1",
+]
+
+[project.scripts]
+facturas = "facturas.cli:main"
+
+[build-system]
+requires = ["uv_build>=0.13.6,<0.14.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.2.0",
+]

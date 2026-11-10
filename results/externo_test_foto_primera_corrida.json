@@ -1,0 +1,1310 @@
+{
+  "dataset": "mauroibz/facturas_argentinas_2 (Hugging Face)",
+  "parte": "test",
+  "condicion": "foto",
+  "documentos": 145,
+  "precision_por_campo": {
+    "letra": 100.0,
+    "punto_venta": 100.0,
+    "numero": 100.0,
+    "fecha_emision": 100.0,
+    "emisor_cuit": 99.3,
+    "emisor_razon_social": 98.6,
+    "receptor_cuit": 99.3,
+    "receptor_razon_social": 95.2,
+    "moneda": 100.0,
+    "neto_gravado": 45.5,
+    "iva_total": 52.4,
+    "otros_tributos": 100.0,
+    "total": 100.0
+  },
+  "precision_campos_global": 91.6,
+  "documentos_100_correctos_pct": 29.0,
+  "por_diseno_100_correctos": {
+    "baseline": "11/31",
+    "cards": "11/31",
+    "columns": "8/24",
+    "columns_notitles": "5/23",
+    "sidebar": "7/36"
+  },
+  "qr_leido_pct": 100.0,
+  "marcados_para_revision_pct": 100.0,
+  "motivos": {
+    "qr_no_oficial": 145,
+    "leyenda_comprobante_no_autorizado": 144,
+    "factura_a_sin_iva": 44,
+    "falta:iva_contenido": 34,
+    "falta:neto_gravado": 34,
+    "total_no_cierra": 13,
+    "qr_no_coincide:emisor_cuit": 1,
+    "qr_no_coincide:receptor_cuit": 1
+  },
+  "si_fueran_genuinas": {
+    "aprobados_automaticamente_pct": 66.9,
+    "aprobados_con_error": 55,
+    "motivos_de_lectura": {
+      "factura_a_sin_iva": 44,
+      "falta:neto_gravado": 34,
+      "total_no_cierra": 13,
+      "qr_no_coincide:emisor_cuit": 1,
+      "qr_no_coincide:receptor_cuit": 1
+    }
+  },
+  "segundos_promedio": 31.77,
+  "errores": [
+    {
+      "id": "00120-00000396",
+      "template": "sidebar",
+      "campos": {
+        "iva_total": [
+          null,
+          35938.56
+        ]
+      }
+    },
+    {
+      "id": "00246-00000131",
+      "template": "cards",
+      "campos": {
+        "iva_total": [
+          null,
+          238654.5
+        ]
+      }
+    },
+    {
+      "id": "00263-00000087",
+      "template": "sidebar",
+      "campos": {
+        "neto_gravado": [
+          null,
+          4813200
+        ]
+      }
+    },
+    {
+      "id": "00437-00000343",
+      "template": "sidebar",
+      "campos": {
+        "neto_gravado": [
+          null,
+          2005500
+        ],
+        "iva_total": [
+          null,
+          541485
+        ]
+      }
+    },
+    {
+      "id": "00573-00000106",
+      "template": "cards",
+      "campos": {
+        "neto_gravado": [
+          null,
+          13102.6
+        ],
+        "iva_total": [
+          null,
+          1375.77
+        ]
+      }
+    },
+    {
+      "id": "00609-00000111",
+      "template": "columns_notitles",
+      "campos": {
+        "receptor_razon_social": [
+          "Lucas Femandez",
+          "Lucas Fernández"
+        ],
+        "neto_gravado": [
+          null,
+          5053860
+        ],
+        "iva_total": [
+          null,
+          1061310.6
+        ]
+      }
+    },
+    {
+      "id": "00918-00000132",
+      "template": "baseline",
+      "campos": {
+        "neto_gravado": [
+          null,
+          394415
+        ]
+      }
+    },
+    {
+      "id": "00949-00000278",
+      "template": "sidebar",
+      "campos": {
+        "neto_gravado": [
+          null,
+          1443960
+        ],
+        "iva_total": [
+          null,
+          303231.6
+        ]
+      }
+    },
+    {
+      "id": "00984-00000317",
+      "template": "cards",
+      "campos": {
+        "receptor_razon_social": [
+          "Cafe del Rfo",
+          "Café del Río"
+        ],
+        "neto_gravado": [
+          null,
+          8863307.25
+        ]
+      }
+    },
+    {
+      "id": "01027-00000288",
+      "template": "sidebar",
+      "campos": {
+        "neto_gravado": [
+          null,
+          13370
+        ]
+      }
+    },
+    {
+      "id": "01081-00000169",
+      "template": "columns",
+      "campos": {
+        "iva_total": [
+          null,
+          468685.35
+        ]
+      }
+    },
+    {
+      "id": "01086-00000192",
+      "template": "baseline",
+      "campos": {
+        "iva_total": [
+          null,
+          10809.65
+        ]
+      }
+    },
+    {
+      "id": "01554-00000186",
+      "template": "columns",
+      "campos": {
+        "neto_gravado": [
+          null,
+          2674000
+        ],
+        "iva_total": [
+          null,
+          561540
+        ]
+      }
+    },
+    {
+      "id": "01838-00000032",
+      "template": "sidebar",
+      "campos": {
+        "iva_total": [
+          null,
+          633838.28
+        ]
+      }
+    },
+    {
+      "id": "01994-00000075",
+      "template": "columns",
+      "campos": {
+        "iva_total": [
+          null,
+          350962.5
+        ]
+      }
+    },
+    {
+      "id": "02066-00000061",
+      "template": "sidebar",
+      "campos": {
+        "neto_gravado": [
+          null,
+          842310
+        ],
+        "iva_total": [
+          null,
+          176885.1
+        ]
+      }
+    },
+    {
+      "id": "02103-00000175",
+      "template": "columns_notitles",
+      "campos": {
+        "neto_gravado": [
+          null,
+          121667
+        ]
+      }
+    },
+    {
+      "id": "02158-00000255",
+      "template": "baseline",
+      "campos": {
+        "iva_total": [
+          null,
+          162846.6
+        ]
+      }
+    },
+    {
+      "id": "02181-00000113",
+      "template": "columns_notitles",
+      "campos": {
+        "neto_gravado": [
+          null,
+          300825
+        ]
+      }
+    },
+    {
+      "id": "02186-00000137",
+      "template": "columns_notitles",
+      "campos": {
+        "neto_gravado": [
+          null,
+          200550
+        ],
+        "iva_total": [
+          null,
+          42115.5
+        ]
+      }
+    },
+    {
+      "id": "02274-00000321",
+      "template": "columns",
+      "campos": {
+        "neto_gravado": [
+          null,
+          10696
+        ],
+        "iva_total": [
+          null,
+          2246.16
+        ]
+      }
+    },
+    {
+      "id": "02300-00000230",
+      "template": "cards",
+      "campos": {
+        "receptor_razon_social": [
+          "Panaderfa del Pueblo",
+          "Panadería del Pueblo"
+        ]
+      }
+    },
+    {
+      "id": "02371-00000052",
+      "template": "baseline",
+      "campos": {
+        "neto_gravado": [
+          null,
+          15108100
+        ]
+      }
+    },
+    {
+      "id": "02395-00000011",
+      "template": "sidebar",
+      "campos": {
+        "neto_gravado": [
+          null,
+          200550
+        ],
+        "iva_total": [
+          null,
+          21057.75
+        ]
+      }
+    },
+    {
+      "id": "02405-00000297",
+      "template": "cards",
+      "campos": {
+        "neto_gravado": [
+          null,
+          1069600
+        ],
+        "iva_total": [
+          null,
+          224616
+        ]
+      }
+    },
+    {
+      "id": "02410-00000073",
+      "template": "columns_notitles",
+      "campos": {
+        "neto_gravado": [
+          null,
+          106960
+        ],
+        "iva_total": [
+          null,
+          22461.6
+        ]
+      }
+    },
+    {
+      "id": "02422-00000282",
+      "template": "sidebar",
+      "campos": {
+        "iva_total": [
+          null,
+          184185.12
+        ]
+      }
+    },
+    {
+      "id": "02443-00000225",
+      "template": "columns_notitles",
+      "campos": {
+        "emisor_cuit": [
+          "30313589648",
+          "30387286248"
+        ],
+        "receptor_cuit": [
+          "30387286248",
+          "30313589648"
+        ]
+      }
+    },
+    {
+      "id": "02458-00000387",
+      "template": "sidebar",
+      "campos": {
+        "neto_gravado": [
+          null,
+          203892.5
+        ],
+        "iva_total": [
+          null,
+          30182.77
+        ]
+      }
+    },
+    {
+      "id": "02568-00000136",
+      "template": "cards",
+      "campos": {
+        "iva_total": [
+          null,
+          192327.45
+        ]
+      }
+    },
+    {
+      "id": "02804-00000060",
+      "template": "sidebar",
+      "campos": {
+        "neto_gravado": [
+          null,
+          455917
+        ]
+      }
+    },
+    {
+      "id": "03152-00000300",
+      "template": "sidebar",
+      "campos": {
+        "receptor_razon_social": [
+          "Lavadero Ecolbgico",
+          "Lavadero Ecológico"
+        ],
+        "neto_gravado": [
+          null,
+          76209
+        ],
+        "iva_total": [
+          null,
+          16003.89
+        ]
+      }
+    },
+    {
+      "id": "03181-00000033",
+      "template": "sidebar",
+      "campos": {
+        "iva_total": [
+          null,
+          1754812.5
+        ]
+      }
+    },
+    {
+      "id": "03214-00000045",
+      "template": "baseline",
+      "campos": {
+        "neto_gravado": [
+          null,
+          120330
+        ],
+        "iva_total": [
+          null,
+          25269.3
+        ]
+      }
+    },
+    {
+      "id": "03282-00000150",
+      "template": "columns_notitles",
+      "campos": {
+        "neto_gravado": [
+          null,
+          254030
+        ]
+      }
+    },
+    {
+      "id": "03350-00000107",
+      "template": "sidebar",
+      "campos": {
+        "neto_gravado": [
+          null,
+          374360
+        ],
+        "iva_total": [
+          null,
+          78615.6
+        ]
+      }
+    },
+    {
+      "id": "03359-00000057",
+      "template": "columns_notitles",
+      "campos": {
+        "neto_gravado": [
+          null,
+          3048360
+        ],
+        "iva_total": [
+          null,
+          614886.3
+        ]
+      }
+    },
+    {
+      "id": "03363-00000008",
+      "template": "columns",
+      "campos": {
+        "neto_gravado": [
+          null,
+          1203300
+        ]
+      }
+    },
+    {
+      "id": "03396-00000304",
+      "template": "columns",
+      "campos": {
+        "neto_gravado": [
+          null,
+          1965390
+        ],
+        "iva_total": [
+          null,
+          311654.7
+        ]
+      }
+    },
+    {
+      "id": "03533-00000148",
+      "template": "cards",
+      "campos": {
+        "neto_gravado": [
+          null,
+          335587
+        ],
+        "iva_total": [
+          null,
+          70473.27
+        ]
+      }
+    },
+    {
+      "id": "03623-00000048",
+      "template": "cards",
+      "campos": {
+        "neto_gravado": [
+          null,
+          762090
+        ],
+        "iva_total": [
+          null,
+          130558.05
+        ]
+      }
+    },
+    {
+      "id": "03633-00000083",
+      "template": "cards",
+      "campos": {
+        "neto_gravado": [
+          null,
+          40778.5
+        ],
+        "iva_total": [
+          null,
+          10368.44
+        ]
+      }
+    },
+    {
+      "id": "03648-00000348",
+      "template": "cards",
+      "campos": {
+        "neto_gravado": [
+          null,
+          19185950
+        ]
+      }
+    },
+    {
+      "id": "03650-00000238",
+      "template": "sidebar",
+      "campos": {
+        "neto_gravado": [
+          null,
+          60165
+        ],
+        "iva_total": [
+          null,
+          12634.65
+        ]
+      }
+    },
+    {
+      "id": "03677-00000293",
+      "template": "cards",
+      "campos": {
+        "neto_gravado": [
+          null,
+          201887
+        ]
+      }
+    },
+    {
+      "id": "03776-00000067",
+      "template": "baseline",
+      "campos": {
+        "neto_gravado": [
+          null,
+          310184
+        ]
+      }
+    },
+    {
+      "id": "03817-00000217",
+      "template": "cards",
+      "campos": {
+        "neto_gravado": [
+          null,
+          401100
+        ],
+        "iva_total": [
+          null,
+          84231
+        ]
+      }
+    },
+    {
+      "id": "03907-00000018",
+      "template": "columns",
+      "campos": {
+        "neto_gravado": [
+          null,
+          1464015
+        ],
+        "iva_total": [
+          null,
+          206365.95
+        ]
+      }
+    },
+    {
+      "id": "03910-00000355",
+      "template": "baseline",
+      "campos": {
+        "iva_total": [
+          null,
+          2161929
+        ]
+      }
+    },
+    {
+      "id": "03966-00000287",
+      "template": "columns",
+      "campos": {
+        "iva_total": [
+          null,
+          269539.2
+        ]
+      }
+    },
+    {
+      "id": "04026-00000019",
+      "template": "baseline",
+      "campos": {
+        "neto_gravado": [
+          null,
+          5615400
+        ],
+        "iva_total": [
+          null,
+          1179234
+        ]
+      }
+    },
+    {
+      "id": "04179-00000149",
+      "template": "cards",
+      "campos": {
+        "neto_gravado": [
+          null,
+          1029490
+        ],
+        "iva_total": [
+          null,
+          199346.7
+        ]
+      }
+    },
+    {
+      "id": "04225-00000133",
+      "template": "cards",
+      "campos": {
+        "iva_total": [
+          null,
+          350962.5
+        ]
+      }
+    },
+    {
+      "id": "04316-00000353",
+      "template": "sidebar",
+      "campos": {
+        "neto_gravado": [
+          null,
+          2054969
+        ],
+        "iva_total": [
+          null,
+          431543.49
+        ]
+      }
+    },
+    {
+      "id": "04322-00000327",
+      "template": "baseline",
+      "campos": {
+        "iva_total": [
+          null,
+          451237.5
+        ]
+      }
+    },
+    {
+      "id": "05111-00000400",
+      "template": "sidebar",
+      "campos": {
+        "neto_gravado": [
+          null,
+          628390
+        ]
+      }
+    },
+    {
+      "id": "05138-00000394",
+      "template": "columns_notitles",
+      "campos": {
+        "neto_gravado": [
+          null,
+          374360
+        ],
+        "iva_total": [
+          null,
+          78615.6
+        ]
+      }
+    },
+    {
+      "id": "05221-00000006",
+      "template": "columns",
+      "campos": {
+        "neto_gravado": [
+          null,
+          3676750
+        ]
+      }
+    },
+    {
+      "id": "05614-00000183",
+      "template": "columns",
+      "campos": {
+        "neto_gravado": [
+          null,
+          108163.3
+        ],
+        "iva_total": [
+          null,
+          22714.29
+        ]
+      }
+    },
+    {
+      "id": "05708-00000328",
+      "template": "sidebar",
+      "campos": {
+        "emisor_razon_social": [
+          "VideoProducciones C6rdoba",
+          "VideoProducciones Córdoba"
+        ],
+        "iva_total": [
+          null,
+          12073110
+        ]
+      }
+    },
+    {
+      "id": "05726-00000139",
+      "template": "sidebar",
+      "campos": {
+        "neto_gravado": [
+          null,
+          592090.45
+        ]
+      }
+    },
+    {
+      "id": "05879-00000005",
+      "template": "baseline",
+      "campos": {
+        "neto_gravado": [
+          null,
+          374360
+        ]
+      }
+    },
+    {
+      "id": "05938-00000162",
+      "template": "columns",
+      "campos": {
+        "neto_gravado": [
+          null,
+          3609900
+        ],
+        "iva_total": [
+          null,
+          758079
+        ]
+      }
+    },
+    {
+      "id": "06127-00000193",
+      "template": "baseline",
+      "campos": {
+        "receptor_razon_social": [
+          "Clinica Odontol6gica Rivera",
+          "Clínica Odontológica Rivera"
+        ],
+        "neto_gravado": [
+          null,
+          1136450
+        ]
+      }
+    },
+    {
+      "id": "06144-00000070",
+      "template": "sidebar",
+      "campos": {
+        "neto_gravado": [
+          null,
+          84231
+        ],
+        "iva_total": [
+          null,
+          17688.51
+        ]
+      }
+    },
+    {
+      "id": "06370-00000092",
+      "template": "sidebar",
+      "campos": {
+        "neto_gravado": [
+          null,
+          60165
+        ],
+        "iva_total": [
+          null,
+          12634.65
+        ]
+      }
+    },
+    {
+      "id": "06444-00000155",
+      "template": "sidebar",
+      "campos": {
+        "iva_total": [
+          null,
+          179692.8
+        ]
+      }
+    },
+    {
+      "id": "06500-00000001",
+      "template": "columns",
+      "campos": {
+        "neto_gravado": [
+          null,
+          46126.5
+        ]
+      }
+    },
+    {
+      "id": "06526-00000344",
+      "template": "columns",
+      "campos": {
+        "neto_gravado": [
+          null,
+          467950
+        ]
+      }
+    },
+    {
+      "id": "06542-00000140",
+      "template": "sidebar",
+      "campos": {
+        "emisor_razon_social": [
+          "ServiclosAudiovisualesStudioOne",
+          "Servicios Audiovisuales StudioOne"
+        ]
+      }
+    },
+    {
+      "id": "06702-00000222",
+      "template": "columns",
+      "campos": {
+        "neto_gravado": [
+          null,
+          80220
+        ]
+      }
+    },
+    {
+      "id": "06848-00000174",
+      "template": "cards",
+      "campos": {
+        "iva_total": [
+          null,
+          4492.32
+        ]
+      }
+    },
+    {
+      "id": "06910-00000003",
+      "template": "baseline",
+      "campos": {
+        "neto_gravado": [
+          null,
+          187514.25
+        ],
+        "iva_total": [
+          null,
+          39377.99
+        ]
+      }
+    },
+    {
+      "id": "06923-00000324",
+      "template": "sidebar",
+      "campos": {
+        "neto_gravado": [
+          null,
+          116987.5
+        ],
+        "iva_total": [
+          null,
+          24567.38
+        ]
+      }
+    },
+    {
+      "id": "07014-00000143",
+      "template": "baseline",
+      "campos": {
+        "neto_gravado": [
+          null,
+          601650
+        ],
+        "iva_total": [
+          null,
+          63173.25
+        ]
+      }
+    },
+    {
+      "id": "07278-00000091",
+      "template": "baseline",
+      "campos": {
+        "iva_total": [
+          null,
+          3144.62
+        ]
+      }
+    },
+    {
+      "id": "07438-00000173",
+      "template": "cards",
+      "campos": {
+        "neto_gravado": [
+          null,
+          192528
+        ]
+      }
+    },
+    {
+      "id": "07507-00000012",
+      "template": "cards",
+      "campos": {
+        "neto_gravado": [
+          null,
+          11631900
+        ]
+      }
+    },
+    {
+      "id": "07533-00000079",
+      "template": "columns_notitles",
+      "campos": {
+        "neto_gravado": [
+          null,
+          615020
+        ],
+        "iva_total": [
+          null,
+          129154.2
+        ]
+      }
+    },
+    {
+      "id": "07565-00000004",
+      "template": "baseline",
+      "campos": {
+        "neto_gravado": [
+          null,
+          202956.55
+        ],
+        "iva_total": [
+          null,
+          42620.88
+        ]
+      }
+    },
+    {
+      "id": "07636-00000325",
+      "template": "columns_notitles",
+      "campos": {
+        "neto_gravado": [
+          null,
+          107361100
+        ],
+        "iva_total": [
+          null,
+          22545831
+        ]
+      }
+    },
+    {
+      "id": "07949-00000276",
+      "template": "columns_notitles",
+      "campos": {
+        "iva_total": [
+          null,
+          271785.36
+        ]
+      }
+    },
+    {
+      "id": "08192-00000078",
+      "template": "baseline",
+      "campos": {
+        "neto_gravado": [
+          null,
+          577584
+        ]
+      }
+    },
+    {
+      "id": "08199-00000359",
+      "template": "sidebar",
+      "campos": {
+        "neto_gravado": [
+          null,
+          75540.5
+        ]
+      }
+    },
+    {
+      "id": "08281-00000374",
+      "template": "sidebar",
+      "campos": {
+        "neto_gravado": [
+          null,
+          521430
+        ],
+        "iva_total": [
+          null,
+          109500.3
+        ]
+      }
+    },
+    {
+      "id": "08290-00000020",
+      "template": "columns_notitles",
+      "campos": {
+        "neto_gravado": [
+          null,
+          327565
+        ],
+        "iva_total": [
+          null,
+          84431.55
+        ]
+      }
+    },
+    {
+      "id": "08359-00000047",
+      "template": "columns_notitles",
+      "campos": {
+        "neto_gravado": [
+          null,
+          46795
+        ]
+      }
+    },
+    {
+      "id": "08391-00000263",
+      "template": "columns",
+      "campos": {
+        "receptor_razon_social": [
+          null,
+          "Ingeniería Solar Patagonia"
+        ],
+        "neto_gravado": [
+          null,
+          147070
+        ]
+      }
+    },
+    {
+      "id": "08438-00000289",
+      "template": "cards",
+      "campos": {
+        "neto_gravado": [
+          null,
+          64176
+        ]
+      }
+    },
+    {
+      "id": "08501-00000291",
+      "template": "baseline",
+      "campos": {
+        "iva_total": [
+          null,
+          168462
+        ]
+      }
+    },
+    {
+      "id": "08609-00000368",
+      "template": "columns_notitles",
+      "campos": {
+        "neto_gravado": [
+          null,
+          37436
+        ],
+        "iva_total": [
+          null,
+          10107.72
+        ]
+      }
+    },
+    {
+      "id": "08611-00000071",
+      "template": "cards",
+      "campos": {
+        "neto_gravado": [
+          null,
+          3076771.25
+        ],
+        "iva_total": [
+          null,
+          646121.96
+        ]
+      }
+    },
+    {
+      "id": "08823-00000099",
+      "template": "cards",
+      "campos": {
+        "neto_gravado": [
+          null,
+          213920
+        ],
+        "iva_total": [
+          null,
+          44923.2
+        ]
+      }
+    },
+    {
+      "id": "08968-00000223",
+      "template": "sidebar",
+      "campos": {
+        "neto_gravado": [
+          null,
+          127015
+        ],
+        "iva_total": [
+          null,
+          26673.15
+        ]
+      }
+    },
+    {
+      "id": "09133-00000164",
+      "template": "columns_notitles",
+      "campos": {
+        "neto_gravado": [
+          null,
+          96264
+        ],
+        "iva_total": [
+          null,
+          10107.72
+        ]
+      }
+    },
+    {
+      "id": "09148-00000195",
+      "template": "baseline",
+      "campos": {
+        "receptor_razon_social": [
+          "Repuestos La Estaci6n",
+          "Repuestos La Estación"
+        ]
+      }
+    },
+    {
+      "id": "09299-00000074",
+      "template": "sidebar",
+      "campos": {
+        "neto_gravado": [
+          null,
+          1430590
+        ],
+        "iva_total": [
+          null,
+          300423.9
+        ]
+      }
+    },
+    {
+      "id": "09416-00000247",
+      "template": "columns",
+      "campos": {
+        "neto_gravado": [
+          null,
+          187180
+        ],
+        "iva_total": [
+          null,
+          39307.8
+        ]
+      }
+    },
+    {
+      "id": "09454-00000281",
+      "template": "baseline",
+      "campos": {
+        "neto_gravado": [
+          null,
+          118993
+        ]
+      }
+    },
+    {
+      "id": "09530-00000303",
+      "template": "sidebar",
+      "campos": {
+        "neto_gravado": [
+          null,
+          2406600
+        ],
+        "iva_total": [
+          null,
+          505386
+        ]
+      }
+    },
+    {
+      "id": "09698-00000158",
+      "template": "columns_notitles",
+      "campos": {
+        "neto_gravado": [
+          null,
+          367675
+        ]
+      }
+    },
+    {
+      "id": "09829-00000077",
+      "template": "columns_notitles",
+      "campos": {
+        "neto_gravado": [
+          null,
+          31753.75
+        ],
+        "iva_total": [
+          null,
+          4036.07
+        ]
+      }
+    },
+    {
+      "id": "09999-00000010",
+      "template": "baseline",
+      "campos": {
+        "neto_gravado": [
+          null,
+          196539
+        ],
+        "iva_total": [
+          null,
+          30744.32
+        ]
+      }
+    }
+  ]
+}

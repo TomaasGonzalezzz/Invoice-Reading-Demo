@@ -1,0 +1,102 @@
+{
+  "dataset": "mauroibz/facturas_argentinas_2 (Hugging Face)",
+  "parte": "test",
+  "condicion": "imagen",
+  "documentos": 145,
+  "precision_por_campo": {
+    "letra": 100.0,
+    "punto_venta": 99.3,
+    "numero": 100.0,
+    "fecha_emision": 100.0,
+    "emisor_cuit": 100.0,
+    "emisor_razon_social": 99.3,
+    "receptor_cuit": 100.0,
+    "receptor_razon_social": 98.6,
+    "moneda": 100.0,
+    "neto_gravado": 100.0,
+    "iva_total": 100.0,
+    "otros_tributos": 100.0,
+    "total": 99.3
+  },
+  "precision_campos_global": 99.7,
+  "documentos_100_correctos_pct": 96.6,
+  "por_diseno_100_correctos": {
+    "baseline": "29/31",
+    "cards": "30/31",
+    "columns": "23/24",
+    "columns_notitles": "23/23",
+    "sidebar": "35/36"
+  },
+  "qr_leido_pct": 100.0,
+  "marcados_para_revision_pct": 100.0,
+  "motivos": {
+    "qr_no_oficial": 145,
+    "leyenda_comprobante_no_autorizado": 145,
+    "falta:iva_contenido": 34,
+    "qr_no_coincide:total": 1,
+    "total_no_cierra": 1,
+    "qr_no_coincide:punto_venta": 1
+  },
+  "si_fueran_genuinas": {
+    "aprobados_automaticamente_pct": 98.6,
+    "aprobados_con_error": 3,
+    "motivos_de_lectura": {
+      "qr_no_coincide:total": 1,
+      "total_no_cierra": 1,
+      "qr_no_coincide:punto_venta": 1
+    }
+  },
+  "segundos_promedio": 16.66,
+  "errores": [
+    {
+      "id": "01554-00000186",
+      "template": "columns",
+      "campos": {
+        "emisor_razon_social": [
+          "MueblesyDisenioPalermo S.R.L.",
+          "Muebles y Diseño Palermo S.R.L."
+        ]
+      }
+    },
+    {
+      "id": "04225-00000133",
+      "template": "cards",
+      "campos": {
+        "receptor_razon_social": [
+          "StudioVerdeDisenio",
+          "Studio Verde Diseño"
+        ]
+      }
+    },
+    {
+      "id": "07178-00000145",
+      "template": "sidebar",
+      "campos": {
+        "total": [
+          89.0,
+          9.68
+        ]
+      }
+    },
+    {
+      "id": "07278-00000091",
+      "template": "baseline",
+      "campos": {
+        "receptor_razon_social": [
+          "TallerEIHerrero",
+          "Taller El Herrero"
+        ]
+      }
+    },
+    {
+      "id": "09999-00000010",
+      "template": "baseline",
+      "campos": {
+        "punto_venta": [
+          66660,
+          9999
+        ]
+      }
+    }
+  ]
+}

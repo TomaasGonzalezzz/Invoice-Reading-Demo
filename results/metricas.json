@@ -1,0 +1,249 @@
+{
+  "conditions": {
+    "pdf": {
+      "documentos": 50,
+      "qr_leido_pct": 96.0,
+      "precision_por_campo": {
+        "tipo": 100.0,
+        "letra": 100.0,
+        "punto_venta": 100.0,
+        "numero": 100.0,
+        "fecha_emision": 100.0,
+        "emisor_cuit": 100.0,
+        "emisor_razon_social": 100.0,
+        "receptor_cuit": 100.0,
+        "receptor_razon_social": 100.0,
+        "neto_gravado": 100.0,
+        "iva_21": 100.0,
+        "iva_10_5": 100.0,
+        "iva_total": 100.0,
+        "otros_tributos": 100.0,
+        "iva_contenido": 100.0,
+        "total": 100.0,
+        "cae": 100.0,
+        "cae_vencimiento": 100.0
+      },
+      "precision_campos_global": 100.0,
+      "documentos_100_correctos_pct": 100.0,
+      "aprobados_automaticamente_pct": 95.6,
+      "aprobados_con_error": 0,
+      "a_revision_pct": 4.4,
+      "conteo": {
+        "total": 45,
+        "ok_correct": 43,
+        "ok_wrong": 0,
+        "review": 2,
+        "fully_correct": 45
+      },
+      "trampas_detectadas": "5/5",
+      "trampas": [
+        {
+          "id": "fac_005",
+          "trap": "total_no_cierra",
+          "detectada": true,
+          "motivos": [
+            "total_no_cierra"
+          ]
+        },
+        {
+          "id": "fac_016",
+          "trap": "cuit_invalido",
+          "detectada": true,
+          "motivos": [
+            "qr_no_coincide:emisor_cuit",
+            "cuit_emisor_invalido"
+          ]
+        },
+        {
+          "id": "fac_030",
+          "trap": "qr_distinto",
+          "detectada": true,
+          "motivos": [
+            "qr_no_coincide:total"
+          ]
+        },
+        {
+          "id": "fac_040",
+          "trap": "total_no_cierra",
+          "detectada": true,
+          "motivos": [
+            "total_no_cierra"
+          ]
+        },
+        {
+          "id": "fac_045",
+          "trap": "qr_distinto",
+          "detectada": true,
+          "motivos": [
+            "qr_no_coincide:total"
+          ]
+        }
+      ],
+      "errores_en_aprobados": [],
+      "segundos_promedio": 0.24
+    },
+    "scan": {
+      "documentos": 50,
+      "qr_leido_pct": 96.0,
+      "precision_por_campo": {
+        "tipo": 100.0,
+        "letra": 100.0,
+        "punto_venta": 100.0,
+        "numero": 100.0,
+        "fecha_emision": 100.0,
+        "emisor_cuit": 100.0,
+        "emisor_razon_social": 100.0,
+        "receptor_cuit": 100.0,
+        "receptor_razon_social": 100.0,
+        "neto_gravado": 100.0,
+        "iva_21": 100.0,
+        "iva_10_5": 100.0,
+        "iva_total": 100.0,
+        "otros_tributos": 95.6,
+        "iva_contenido": 100.0,
+        "total": 100.0,
+        "cae": 100.0,
+        "cae_vencimiento": 100.0
+      },
+      "precision_campos_global": 99.8,
+      "documentos_100_correctos_pct": 95.6,
+      "aprobados_automaticamente_pct": 91.1,
+      "aprobados_con_error": 0,
+      "a_revision_pct": 8.9,
+      "conteo": {
+        "total": 45,
+        "ok_correct": 41,
+        "ok_wrong": 0,
+        "review": 4,
+        "fully_correct": 43
+      },
+      "trampas_detectadas": "5/5",
+      "trampas": [
+        {
+          "id": "fac_005",
+          "trap": "total_no_cierra",
+          "detectada": true,
+          "motivos": [
+            "total_no_cierra"
+          ]
+        },
+        {
+          "id": "fac_016",
+          "trap": "cuit_invalido",
+          "detectada": true,
+          "motivos": [
+            "qr_no_coincide:emisor_cuit (posible error de lectura)"
+          ]
+        },
+        {
+          "id": "fac_030",
+          "trap": "qr_distinto",
+          "detectada": true,
+          "motivos": [
+            "qr_no_coincide:total"
+          ]
+        },
+        {
+          "id": "fac_040",
+          "trap": "total_no_cierra",
+          "detectada": true,
+          "motivos": [
+            "total_no_cierra"
+          ]
+        },
+        {
+          "id": "fac_045",
+          "trap": "qr_distinto",
+          "detectada": true,
+          "motivos": [
+            "qr_no_coincide:total"
+          ]
+        }
+      ],
+      "errores_en_aprobados": [],
+      "segundos_promedio": 13.9
+    },
+    "foto": {
+      "documentos": 50,
+      "qr_leido_pct": 96.0,
+      "precision_por_campo": {
+        "tipo": 100.0,
+        "letra": 100.0,
+        "punto_venta": 100.0,
+        "numero": 100.0,
+        "fecha_emision": 100.0,
+        "emisor_cuit": 100.0,
+        "emisor_razon_social": 100.0,
+        "receptor_cuit": 100.0,
+        "receptor_razon_social": 100.0,
+        "neto_gravado": 100.0,
+        "iva_21": 100.0,
+        "iva_10_5": 100.0,
+        "iva_total": 100.0,
+        "otros_tributos": 97.8,
+        "iva_contenido": 100.0,
+        "total": 100.0,
+        "cae": 100.0,
+        "cae_vencimiento": 100.0
+      },
+      "precision_campos_global": 99.9,
+      "documentos_100_correctos_pct": 97.8,
+      "aprobados_automaticamente_pct": 93.3,
+      "aprobados_con_error": 0,
+      "a_revision_pct": 6.7,
+      "conteo": {
+        "total": 45,
+        "ok_correct": 42,
+        "ok_wrong": 0,
+        "review": 3,
+        "fully_correct": 44
+      },
+      "trampas_detectadas": "5/5",
+      "trampas": [
+        {
+          "id": "fac_005",
+          "trap": "total_no_cierra",
+          "detectada": true,
+          "motivos": [
+            "total_no_cierra"
+          ]
+        },
+        {
+          "id": "fac_016",
+          "trap": "cuit_invalido",
+          "detectada": true,
+          "motivos": [
+            "qr_no_coincide:emisor_cuit (posible error de lectura)"
+          ]
+        },
+        {
+          "id": "fac_030",
+          "trap": "qr_distinto",
+          "detectada": true,
+          "motivos": [
+            "qr_no_coincide:total"
+          ]
+        },
+        {
+          "id": "fac_040",
+          "trap": "total_no_cierra",
+          "detectada": true,
+          "motivos": [
+            "total_no_cierra"
+          ]
+        },
+        {
+          "id": "fac_045",
+          "trap": "qr_distinto",
+          "detectada": true,
+          "motivos": [
+            "qr_no_coincide:total"
+          ]
+        }
+      ],
+      "errores_en_aprobados": [],
+      "segundos_promedio": 12.22
+    }
+  },
+  "llm": null
+}

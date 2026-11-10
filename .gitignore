@@ -1,0 +1,18 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Generated data (own test set and command-line output)
+data/
+salida/
+.pytest_cache/
+
+# Demo set generation scratch
+demo/_pdf_tmp/

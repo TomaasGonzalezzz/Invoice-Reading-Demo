@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lector de facturas</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231e3a5f'/%3E%3Cpath d='M10 8h9l4 4v12H10z' fill='white'/%3E%3Cpath d='M13 16h7M13 19h7M13 22h4' stroke='%231e3a5f' stroke-width='1.6'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="/static/app.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand">
+    <span class="logo" aria-hidden="true">
+      <svg viewBox="0 0 32 32"><rect width="32" height="32" rx="8"/><path d="M10 8h9l4 4v12H10z" fill="#fff"/><path d="M13 16h7M13 19h7M13 22h4" stroke-width="1.6"/></svg>
+    </span>
+    <div>
+      <h1>Lector de facturas</h1>
+      <p>PDF, escaneos y fotos del celular a una planilla controlada</p>
+    </div>
+  </div>
+  <div class="actions">
+    <button class="btn ghost" id="btn-ejemplo" type="button">Probar con el lote de ejemplo</button>
+    <label class="btn secondary" id="btn-subir">
+      <input type="file" id="file-input" multiple accept=".pdf,.jpg,.jpeg,.png,.webp,.tif,.tiff,.bmp">
+      <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 13V4M6 8l4-4 4 4M4 14v2h12v-2"/></svg>
+      Subir facturas
+    </label>
+    <div class="export">
+      <button class="btn primary" id="btn-excel" type="button" disabled>
+        <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 4v9M6 9l4 4 4-4M4 16h12"/></svg>
+        Exportar a Excel
+      </button>
+      <button class="btn ghost small" id="btn-csv" type="button" disabled title="Solo las listas para cargar, separado por punto y coma">CSV</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="empty" id="empty">
+    <div class="drop" id="drop">
+      <div class="drop-art" aria-hidden="true">
+        <span class="paper s1"></span><span class="paper s2"></span><span class="paper s3"></span>
+      </div>
+      <h2>Arrastrá acá las facturas del mes</h2>
+      <p>PDF que llegan por mail, escaneos y fotos de WhatsApp, todo junto y en cualquier orden.</p>
+      <div class="drop-actions">
+        <label class="btn primary">
+          <input type="file" id="file-input-2" multiple accept=".pdf,.jpg,.jpeg,.png,.webp,.tif,.tiff,.bmp">
+          Elegir archivos
+        </label>
+        <button class="btn ghost" id="btn-ejemplo-2" type="button">Usar el lote de ejemplo (20 facturas)</button>
+      </div>
+      <ul class="promise">
+        <li><b>Lee cada dato</b> y muestra de dónde lo sacó.</li>
+        <li><b>Controla</b> CUIT, cuentas, QR de ARCA, CAE y repetidas.</li>
+        <li><b>Separa</b> lo que necesita una mirada, con el motivo.</li>
+      </ul>
+      <p class="local">Todo se procesa en esta computadora. Ningún archivo sale de acá.</p>
+    </div>
+  </section>
+
+  <section class="work" id="work" hidden>
+    <div class="kpis">
+      <div class="kpi">
+        <span class="kpi-label">Leídas</span>
+        <strong id="k-proc">0 de 0</strong>
+        <div class="bar"><i id="k-bar"></i></div>
+      </div>
+      <div class="kpi ok">
+        <span class="kpi-label">Cargadas solas</span>
+        <strong id="k-ok">0</strong>
+        <small>pasaron todos los controles</small>
+      </div>
+      <button class="kpi warn" id="k-rev-card" type="button">
+        <span class="kpi-label">Para revisar</span>
+        <strong id="k-rev">0</strong>
+        <small>cada una con su motivo</small>
+      </button>
+      <div class="kpi">
+        <span class="kpi-label">Importe listo para cargar</span>
+        <strong id="k-imp">$ 0,00</strong>
+        <small id="k-iva">IVA de facturas A: $ 0,00</small>
+      </div>
+    </div>
+
+    <div class="pile" id="pile" aria-label="Archivos del lote"></div>
+
+    <div class="grid">
+      <section class="card sheet-card">
+        <div class="card-head">
+          <h2>Planilla</h2>
+          <span class="hint">Hacé clic en una fila para ver la factura y sus controles</span>
+        </div>
+        <div class="table-wrap">
+          <table class="sheet" id="sheet">
+            <thead>
+              <tr>
+                <th class="c-state">Estado</th>
+                <th class="c-date">Fecha</th>
+                <th class="c-prov">Proveedor</th>
+                <th class="c-comp">Comprobante y archivo</th>
+                <th class="num">Neto</th>
+                <th class="num">IVA</th>
+                <th class="num">Total</th>
+              </tr>
+            </thead>
+            <tbody id="rows"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <aside class="card queue-card" id="queue-card">
+        <div class="card-head">
+          <h2>Para revisar</h2>
+          <span class="count-pill warn" id="q-count">0</span>
+        </div>
+        <p class="queue-sum" id="q-sum">Todavía no hay resultados.</p>
+        <ol class="queue" id="queue"></ol>
+      </aside>
+    </div>
+  </section>
+</main>
+
+<div class="modal" id="detail" hidden>
+  <div class="modal-backdrop" data-close></div>
+  <div class="modal-box detail-box" role="dialog" aria-modal="true" aria-labelledby="d-title">
+    <div class="viewer">
+      <div class="viewer-bar">
+        <div class="seg" id="d-views">
+          <button type="button" data-view="original" class="on">Archivo original</button>
+          <button type="button" data-view="enderezada">Hoja enderezada</button>
+        </div>
+        <span class="viewer-hint">Pasá el mouse por un dato para ver de dónde salió</span>
+      </div>
+      <div class="stage" id="d-stage">
+        <div class="frame" id="d-frame">
+          <img id="d-img" alt="">
+          <svg id="d-svg" preserveAspectRatio="none"></svg>
+        </div>
+      </div>
+    </div>
+    <div class="info">
+      <div class="info-head">
+        <div>
+          <p class="eyebrow" id="d-kind"></p>
+          <h2 id="d-title"></h2>
+          <p class="sub" id="d-file"></p>
+        </div>
+        <div class="head-btns">
+          <button class="icon-btn" type="button" id="d-prev" aria-label="Anterior" title="Anterior (←)">
+            <svg viewBox="0 0 20 20"><path d="M12 5l-5 5 5 5"/></svg>
+          </button>
+          <button class="icon-btn" type="button" id="d-next" aria-label="Siguiente" title="Siguiente (→)">
+            <svg viewBox="0 0 20 20"><path d="M8 5l5 5-5 5"/></svg>
+          </button>
+          <button class="icon-btn" type="button" data-close aria-label="Cerrar" title="Cerrar (Esc)">
+            <svg viewBox="0 0 20 20"><path d="M5 5l10 10M15 5L5 15"/></svg>
+          </button>
+        </div>
+      </div>
+      <div class="verdict" id="d-verdict"></div>
+      <h3>Controles</h3>
+      <ul class="checks" id="d-checks"></ul>
+      <h3>Datos leídos</h3>
+      <div class="fields" id="d-fields"></div>
+      <p class="legend">
+        <span><i class="src qr"></i>confirmado con el QR de ARCA</span>
+        <span><i class="src pdf"></i>texto del PDF</span>
+        <span><i class="src imagen"></i>leído de la imagen</span>
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="xls" hidden>
+  <div class="modal-backdrop" data-close></div>
+  <div class="modal-box xls-box" role="dialog" aria-modal="true" aria-labelledby="x-title">
+    <div class="xls-head">
+      <div class="xls-file">
+        <span class="xls-icon" aria-hidden="true">X</span>
+        <div>
+          <h2 id="x-title">comprobantes.xlsx</h2>
+          <p id="x-sub">Descargado. Así queda el archivo:</p>
+        </div>
+      </div>
+      <button class="icon-btn" type="button" data-close aria-label="Cerrar">
+        <svg viewBox="0 0 20 20"><path d="M5 5l10 10M15 5L5 15"/></svg>
+      </button>
+    </div>
+    <div class="xls-grid-wrap"><table class="xls-grid" id="x-grid"></table></div>
+    <div class="xls-tabs" id="x-tabs"></div>
+  </div>
+</div>
+
+<div class="toast" id="toast" hidden></div>
+<script src="/static/app.js"></script>
+</body>
+</html>

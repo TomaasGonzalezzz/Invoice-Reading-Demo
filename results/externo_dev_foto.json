@@ -1,0 +1,126 @@
+{
+  "dataset": "mauroibz/facturas_argentinas_2 (Hugging Face)",
+  "parte": "dev",
+  "condicion": "foto",
+  "documentos": 55,
+  "precision_por_campo": {
+    "letra": 100.0,
+    "punto_venta": 100.0,
+    "numero": 100.0,
+    "fecha_emision": 100.0,
+    "emisor_cuit": 98.2,
+    "emisor_razon_social": 96.4,
+    "receptor_cuit": 98.2,
+    "receptor_razon_social": 96.4,
+    "moneda": 100.0,
+    "neto_gravado": 98.2,
+    "iva_total": 98.2,
+    "otros_tributos": 100.0,
+    "total": 100.0
+  },
+  "precision_campos_global": 98.9,
+  "documentos_100_correctos_pct": 87.3,
+  "por_diseno_100_correctos": {
+    "baseline": "11/13",
+    "cards": "8/10",
+    "columns": "8/8",
+    "columns_notitles": "12/14",
+    "sidebar": "9/10"
+  },
+  "qr_leido_pct": 100.0,
+  "marcados_para_revision_pct": 100.0,
+  "motivos": {
+    "qr_no_oficial": 55,
+    "leyenda_comprobante_no_autorizado": 55,
+    "falta:iva_contenido": 16,
+    "qr_no_coincide:emisor_cuit": 1,
+    "qr_no_coincide:receptor_cuit": 1,
+    "etiqueta_sin_valor:neto_gravado": 1
+  },
+  "si_fueran_genuinas": {
+    "aprobados_automaticamente_pct": 96.4,
+    "aprobados_con_error": 5,
+    "motivos_de_lectura": {
+      "qr_no_coincide:emisor_cuit": 1,
+      "qr_no_coincide:receptor_cuit": 1,
+      "etiqueta_sin_valor:neto_gravado": 1
+    }
+  },
+  "segundos_promedio": 17.09,
+  "errores": [
+    {
+      "id": "03149-00000088",
+      "template": "baseline",
+      "campos": {
+        "receptor_razon_social": [
+          "Taller de Restauraci6n Cruz",
+          "Taller de Restauración Cruz"
+        ]
+      }
+    },
+    {
+      "id": "04293-00000312",
+      "template": "cards",
+      "campos": {
+        "receptor_razon_social": [
+          "Oimos Ingenieria S.R.L.",
+          "Olmos Ingeniería SRL"
+        ]
+      }
+    },
+    {
+      "id": "05532-00000273",
+      "template": "columns_notitles",
+      "campos": {
+        "emisor_cuit": [
+          "30351391908",
+          "30124582748"
+        ],
+        "receptor_cuit": [
+          "30124582748",
+          "30351391908"
+        ]
+      }
+    },
+    {
+      "id": "05939-00000206",
+      "template": "cards",
+      "campos": {
+        "emisor_razon_social": [
+          "Ferreteria La Uni6n",
+          "Ferretería La Unión"
+        ]
+      }
+    },
+    {
+      "id": "05968-00000233",
+      "template": "columns_notitles",
+      "campos": {
+        "neto_gravado": [
+          null,
+          93589.99
+        ]
+      }
+    },
+    {
+      "id": "07031-00000370",
+      "template": "baseline",
+      "campos": {
+        "emisor_razon_social": [
+          "Centro Optico C6rdoba",
+          "Centro Óptico Córdoba"
+        ]
+      }
+    },
+    {
+      "id": "07065-00000279",
+      "template": "sidebar",
+      "campos": {
+        "iva_total": [
+          null,
+          39708.9
+        ]
+      }
+    }
+  ]
+}

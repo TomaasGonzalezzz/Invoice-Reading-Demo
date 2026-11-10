@@ -1,0 +1,188 @@
+{
+  "dataset": "mauroibz/facturas_argentinas_2 (Hugging Face)",
+  "parte": "test",
+  "condicion": "foto",
+  "documentos": 145,
+  "precision_por_campo": {
+    "letra": 100.0,
+    "punto_venta": 100.0,
+    "numero": 100.0,
+    "fecha_emision": 100.0,
+    "emisor_cuit": 99.3,
+    "emisor_razon_social": 98.6,
+    "receptor_cuit": 99.3,
+    "receptor_razon_social": 95.2,
+    "moneda": 100.0,
+    "neto_gravado": 97.9,
+    "iva_total": 100.0,
+    "otros_tributos": 100.0,
+    "total": 100.0
+  },
+  "precision_campos_global": 99.3,
+  "documentos_100_correctos_pct": 91.0,
+  "por_diseno_100_correctos": {
+    "baseline": "28/31",
+    "cards": "29/31",
+    "columns": "22/24",
+    "columns_notitles": "20/23",
+    "sidebar": "33/36"
+  },
+  "qr_leido_pct": 100.0,
+  "marcados_para_revision_pct": 100.0,
+  "motivos": {
+    "qr_no_oficial": 145,
+    "leyenda_comprobante_no_autorizado": 144,
+    "falta:iva_contenido": 34,
+    "falta:neto_gravado": 2,
+    "etiqueta_sin_valor:neto_gravado": 2,
+    "qr_no_coincide:emisor_cuit": 1,
+    "qr_no_coincide:receptor_cuit": 1
+  },
+  "si_fueran_genuinas": {
+    "aprobados_automaticamente_pct": 97.9,
+    "aprobados_con_error": 10,
+    "motivos_de_lectura": {
+      "falta:neto_gravado": 2,
+      "etiqueta_sin_valor:neto_gravado": 2,
+      "qr_no_coincide:emisor_cuit": 1,
+      "qr_no_coincide:receptor_cuit": 1
+    }
+  },
+  "segundos_promedio": 15.38,
+  "errores": [
+    {
+      "id": "00609-00000111",
+      "template": "columns_notitles",
+      "campos": {
+        "receptor_razon_social": [
+          "Lucas Femandez",
+          "Lucas Fernández"
+        ]
+      }
+    },
+    {
+      "id": "00984-00000317",
+      "template": "cards",
+      "campos": {
+        "receptor_razon_social": [
+          "Cafe del Rfo",
+          "Café del Río"
+        ]
+      }
+    },
+    {
+      "id": "02300-00000230",
+      "template": "cards",
+      "campos": {
+        "receptor_razon_social": [
+          "Panaderfa del Pueblo",
+          "Panadería del Pueblo"
+        ]
+      }
+    },
+    {
+      "id": "02443-00000225",
+      "template": "columns_notitles",
+      "campos": {
+        "emisor_cuit": [
+          "30313589648",
+          "30387286248"
+        ],
+        "receptor_cuit": [
+          "30387286248",
+          "30313589648"
+        ]
+      }
+    },
+    {
+      "id": "03152-00000300",
+      "template": "sidebar",
+      "campos": {
+        "receptor_razon_social": [
+          "Lavadero Ecolbgico",
+          "Lavadero Ecológico"
+        ]
+      }
+    },
+    {
+      "id": "03363-00000008",
+      "template": "columns",
+      "campos": {
+        "neto_gravado": [
+          null,
+          1203300
+        ]
+      }
+    },
+    {
+      "id": "05708-00000328",
+      "template": "sidebar",
+      "campos": {
+        "emisor_razon_social": [
+          "VideoProducciones C6rdoba",
+          "VideoProducciones Córdoba"
+        ]
+      }
+    },
+    {
+      "id": "06127-00000193",
+      "template": "baseline",
+      "campos": {
+        "receptor_razon_social": [
+          "Clinica Odontol6gica Rivera",
+          "Clínica Odontológica Rivera"
+        ]
+      }
+    },
+    {
+      "id": "06542-00000140",
+      "template": "sidebar",
+      "campos": {
+        "emisor_razon_social": [
+          "ServiclosAudiovisualesStudioOne",
+          "Servicios Audiovisuales StudioOne"
+        ]
+      }
+    },
+    {
+      "id": "07636-00000325",
+      "template": "columns_notitles",
+      "campos": {
+        "neto_gravado": [
+          null,
+          107361100
+        ]
+      }
+    },
+    {
+      "id": "08192-00000078",
+      "template": "baseline",
+      "campos": {
+        "neto_gravado": [
+          null,
+          577584
+        ]
+      }
+    },
+    {
+      "id": "08391-00000263",
+      "template": "columns",
+      "campos": {
+        "receptor_razon_social": [
+          null,
+          "Ingeniería Solar Patagonia"
+        ]
+      }
+    },
+    {
+      "id": "09148-00000195",
+      "template": "baseline",
+      "campos": {
+        "receptor_razon_social": [
+          "Repuestos La Estaci6n",
+          "Repuestos La Estación"
+        ]
+      }
+    }
+  ]
+}
