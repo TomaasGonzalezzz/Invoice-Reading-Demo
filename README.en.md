@@ -1,4 +1,4 @@
-# Argentine Invoice Extraction
+# Invoice Reading Demo
 ### Automatic invoice data entry, with checks
 
 Small businesses in Argentina get their suppliers' invoices as e-mailed PDFs, scans or WhatsApp photos, and someone types each one into a spreadsheet or the accounting system. This system reads them all at once, fills in the spreadsheet and checks every invoice: tax ID (CUIT), arithmetic, the ARCA QR code, the authorization code (CAE) and duplicates. Invoices that pass every check are ready to load; the rest go to a review list, with the reason. It runs on an ordinary computer and the files never leave it.
@@ -44,7 +44,7 @@ Each check is shown with ✓ or ✗ and the reason in plain words, for example: 
 
 ### 4. Set aside what needs a look
 
-Nothing that doesn't add up is loaded automatically. In the sample batch, 15 of 20 invoices were ready to load and 5 went to review: a total that doesn't match the sum, a CUIT with a wrong check digit, a QR that registers a different amount than the printed one, a blurry photo that can't be read, and an invoice that arrived twice. Each one is listed with its reason. This batch was built to show the system, not to measure it: the measurement is in step 6, and what I adjusted in the batch is in [EVALUATION.md](docs/EVALUATION.md#3-demo-batch-demolote).
+Nothing that doesn't add up is loaded automatically. In the sample batch, 15 of 20 invoices were ready to load and 5 went to review: a total that doesn't match the sum, a CUIT with a wrong check digit, a QR that registers a different amount than the printed one, a blurry photo that can't be read, and an invoice that arrived twice. Each one is listed with its reason. This batch is meant to show how it works; the measurement is in step 6.
 
 <img src="figures/revisar.png" alt="Full spreadsheet with 15 invoices ready and 5 to review, and the list of the 5 with their reasons" width="900">
 

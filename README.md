@@ -1,4 +1,4 @@
-# Argentine Invoice Extraction
+# Invoice Reading Demo
 ### Carga automática de facturas, con controles
 
 Las pymes reciben las facturas de sus proveedores en PDF por mail, escaneadas o como foto por WhatsApp, y alguien las pasa a mano al Excel o al sistema contable. Este sistema las lee todas juntas, arma la planilla y controla cada una: CUIT, cuentas, QR de ARCA, CAE y facturas repetidas. Las que pasan todos los controles quedan listas para cargar; las demás van a una lista para revisar, con el motivo. Corre en una computadora común y los archivos no salen de ella.
@@ -44,7 +44,7 @@ Cada control se muestra con ✓ o ✗ y el motivo en palabras simples, por ejemp
 
 ### 4. Separar lo que necesita una mirada
 
-Nada que no cierre se carga solo. En el lote de ejemplo, de 20 facturas quedaron 15 listas para cargar y 5 para revisar: un total que no coincide con la suma, un CUIT con el dígito verificador mal, un QR que registra otro importe que el impreso, una foto movida que no se puede leer y una factura que llegó dos veces. Cada una aparece en la lista con su motivo. Es un lote armado para mostrar el sistema, no para medirlo: la medición está en el paso 6, y lo que ajusté del lote, en [EVALUATION.md](docs/EVALUATION.md#3-demo-batch-demolote).
+Nada que no cierre se carga solo. En el lote de ejemplo, de 20 facturas quedaron 15 listas para cargar y 5 para revisar: un total que no coincide con la suma, un CUIT con el dígito verificador mal, un QR que registra otro importe que el impreso, una foto movida que no se puede leer y una factura que llegó dos veces. Cada una aparece en la lista con su motivo. Este lote es para mostrar cómo funciona; la medición está en el paso 6.
 
 <img src="figures/revisar.png" alt="Planilla completa con 15 facturas listas y 5 para revisar, y la lista de las 5 con su motivo" width="900">
 
